@@ -1,0 +1,16 @@
+package com.javaworld.sample.HelloWorld;
+import org.osgi.framework.BundleActivator;
+import org.osgi.framework.BundleContext;
+
+import com.javaworld.sample.service.helloservice.HelloService;
+
+public abstract class Activator implements HelloService {
+
+	public void start(BundleContext context) throws Exception {
+		System.out.println("Hello World!!");
+	}
+
+	public void stop(BundleContext context) throws Exception {
+		System.out.println("Goodbye World!!");
+	}
+}

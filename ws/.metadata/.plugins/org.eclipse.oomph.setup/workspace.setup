@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<setup:Workspace
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:setup="http://www.eclipse.org/oomph/setup/1.0"
+    name="workspace">
+  <setupTask
+      xsi:type="setup:CompoundTask"
+      name="Eclipse Projects">
+    <restriction
+        xsi:type="setup:ProjectCatalog"
+        href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']"/>
+    <setupTask
+        xsi:type="setup:CompoundTask"
+        name="Equinox">
+      <restriction
+          xsi:type="setup:Project"
+          href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='equinox']"/>
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="Bundles">
+        <restriction
+            xsi:type="setup:Project"
+            href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='equinox']/@projects[name='bundles']"/>
+        <setupTask
+            xsi:type="setup:VariableTask"
+            type="FOLDER"
+            name="git.clone.equinox.bundles.location"
+            value="C:\Users\Etu\Documents\Master1\ProcessusDevCollabortif\equinox-master\git\rt.equinox.bundles"
+            label="Equinox Bundles Git clone location">
+          <description>The absolute folder location where the Equinox Bundles Git clone is located</description>
+        </setupTask>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="Framework">
+        <restriction
+            xsi:type="setup:Project"
+            href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='equinox']/@projects[name='framework']"/>
+        <setupTask
+            xsi:type="setup:VariableTask"
+            type="FOLDER"
+            name="git.clone.equinox.framework.location"
+            value="C:\Users\Etu\Documents\Master1\ProcessusDevCollabortif\equinox-master\git\rt.equinox.framework"
+            label="Equinox Framework Git clone location">
+          <description>The absolute folder location where the Equinox Framework Git clone is located</description>
+        </setupTask>
+      </setupTask>
+      <setupTask
+          xsi:type="setup:CompoundTask"
+          name="P2">
+        <restriction
+            xsi:type="setup:Project"
+            href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='equinox']/@projects[name='p2']"/>
+        <setupTask
+            xsi:type="setup:VariableTask"
+            type="FOLDER"
+            name="git.clone.equinox.p2.location"
+            value="C:\Users\Etu\Documents\Master1\ProcessusDevCollabortif\equinox-master\git\rt.equinox.p2"
+            label="Equinox P2 Git clone location">
+          <description>The absolute folder location where the Equinox P2 Git clone is located</description>
+        </setupTask>
+      </setupTask>
+    </setupTask>
+  </setupTask>
+  <stream href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='equinox']/@projects[name='bundles']/@streams[name='master']"/>
+  <stream href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='equinox']/@projects[name='framework']/@streams[name='master']"/>
+  <stream href="index:/org.eclipse.setup#//@projectCatalogs[name='org.eclipse']/@projects[name='equinox']/@projects[name='p2']/@streams[name='master']"/>
+</setup:Workspace>

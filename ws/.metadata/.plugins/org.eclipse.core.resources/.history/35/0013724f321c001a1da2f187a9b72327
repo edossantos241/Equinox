@@ -1,0 +1,5 @@
+package com.javaworld.sample.service.helloservice;
+
+public class HelloServiceImpl {
+
+}

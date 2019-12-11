@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\Etu\Documents\Master1\ProcessusDevCollabortif\equinox-master\ws\.metadata\.plugins\org.eclipse.jdt.core
+3948864180.index
+1224781245.index
+3437206607.index
