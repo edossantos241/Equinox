@@ -1,0 +1,9 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: HelloWorld
+Bundle-SymbolicName: com.javaworld.sample.HelloWorld
+Bundle-Version: 1.0.0.qualifier
+Bundle-Vendor: JAVAWORLD
+Automatic-Module-Name: com.javaworld.sample.HelloWorld
+Bundle-RequiredExecutionEnvironment: JavaSE-12
+Import-Package: com.javaworld.sample.service.helloservice,javax.xml.stream;version="0.0.0",org.apache.lucene.document;version="7.1.0", org.apache.lucene.index;version="7.1.0",org.apache.lucene.search;version="7.1.0.8.0.0",org.apache.lucene.store;version="7.1.0",com.javaworld.sample.service.helloservice,org.osgi.framework;version="1.9.0"

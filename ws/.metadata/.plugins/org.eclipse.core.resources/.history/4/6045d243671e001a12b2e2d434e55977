@@ -1,0 +1,47 @@
+/**
+ * 
+ */
+package com.javaworld.sample.HelloWorld;
+
+import java.awt.Frame;
+import java.awt.Label;
+import java.awt.Panel;
+
+/**
+ * @author Kamal AARAB & Emma DOS SANTOS
+ *
+ */
+public class ClientGUI extends Frame {
+	
+	public ClientGUI() {
+		Panel window = new Panel();
+		Label label1 = new Label("NAJAT EST NULLE.");
+		window.add(label1);
+		this.setTitle("OSGi Client GUI");
+		this.setSize(300, 200);
+//		this.setVisible(true);
+	}
+	public ClientGUI(String text1, String text2) {
+		Panel window = new Panel();
+		Label label1 = new Label(text1);
+		Label label2 = new Label(text2);
+		window.add(label1);
+		window.add(label2);
+		this.setTitle("OSGi Client GUI");
+		this.setSize(300, 200);
+//		this.setVisible(true);
+	}
+	
+	public void createClientGUI(String text1, String text2) {
+		ClientGUI c = new ClientGUI(text1,text2);
+		c.setVisible(true);
+	}
+	/**
+	 * @param args
+	 */
+//	public static void main(String[] args) {
+//		// TODO Auto-generated method stub
+//		ClientGUI client = new ClientGUI();
+//	}
+
+}

@@ -3,17 +3,22 @@ import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 
 import com.javaworld.sample.service.helloservice.HelloService;
-import com.javaworld.sample.service.helloservice.HelloServiceImpl;
+import com.javaworld.sample.service.helloservice.HelloServiceEn;
+import com.javaworld.sample.service.helloservice.HelloServiceFr;
 
 public class Activator implements BundleActivator {
 
 	public void start(BundleContext context) throws Exception {
 		System.out.println("Hello World!!");
-		HelloService h = new HelloServiceImpl();
-		/*h.sayHello(); */
-		String text = h.sayHello();
-		/*ClientGUI.createindow(text,text)*/
-		/* Ajouter l'interface gui dans le meme repository*/
+		HelloService helloEn = new HelloServiceEn();
+		HelloService helloFr = new HelloServiceFr();
+		String text1 = helloEn.sayHello();
+		String text2 = helloFr.sayHello();
+		System.out.println(text1);
+		System.out.println(text2);
+		ClientGUI clientGUI = new ClientGUI();
+		clientGUI.createClientGUI(text1, text2);
+		
 	}
 
 	public void stop(BundleContext context) throws Exception {

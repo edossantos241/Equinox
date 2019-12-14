@@ -6,5 +6,6 @@ Bundle-Version: 1.0.0.qualifier
 Bundle-Vendor: JAVAWORLD
 Automatic-Module-Name: com.javaworld.sample.HelloWorld
 Bundle-RequiredExecutionEnvironment: JavaSE-12
-Import-Package: org.osgi.framework;version="1.9.0"
-Require-Bundle: com.javaworld.sample.service.HelloService;bundle-version="1.0.0"
+Import-Package: com.javaworld.sample.service.helloservice,
+ org.osgi.framework;version="1.9.0"
+Export-Package: com.javaworld.sample.HelloWorld
