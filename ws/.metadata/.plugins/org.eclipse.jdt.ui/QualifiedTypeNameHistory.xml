@@ -6,4 +6,8 @@
     <fullyQualifiedTypeName name="com.javaworld.sample.service.helloservice.HelloServiceFr"/>
     <fullyQualifiedTypeName name="com.javaworld.sample.HelloWorld.Activator"/>
     <fullyQualifiedTypeName name="org.osgi.framework.BundleContext"/>
+    <fullyQualifiedTypeName name="java.awt.Frame"/>
+    <fullyQualifiedTypeName name="java.awt.Panel"/>
+    <fullyQualifiedTypeName name="java.awt.Label"/>
+    <fullyQualifiedTypeName name="com.javaworld.sample.HelloWorld.ClientGUI"/>
 </qualifiedTypeNameHistroy>

@@ -1802,3 +1802,54 @@ Caused by: java.io.IOException: Creating directories for C:\Users\Etu\Documents\
 
 !ENTRY org.eclipse.oomph.setup.ui 1 0 2019-12-14 12:47:46.308
 !MESSAGE Setup tasks were performed during startup updating 2 preferences. See 'C:\Users\AdminEtu\Desktop\equinox\eclipse\configuration\org.eclipse.oomph.setup\setup.log' for details
+!SESSION 2019-12-15 16:37:45.378 -----------------------------------------------
+eclipse.buildId=4.13.0.I20190916-1045
+java.version=11.0.1
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -product org.eclipse.epp.package.java.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.java.product
+
+!ENTRY org.eclipse.egit.ui 2 0 2019-12-15 16:38:58.124
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\AdminEtu'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2019-12-15 16:39:06.000
+!MESSAGE Could not determine the launcher name from C__Users_AdminEtu_Desktop_equinox_eclipse
+
+!ENTRY org.eclipse.oomph.setup.core 2 0 2019-12-15 16:39:07.166
+!MESSAGE org.eclipse.jgit.api.errors.JGitInternalException: Creating directories for C:\Users\Etu\Documents\Master1\ProcessusDevCollabortif\equinox-master\git\rt.equinox.bundles\.git failed
+!STACK 0
+java.lang.Exception: org.eclipse.jgit.api.errors.JGitInternalException: Creating directories for C:\Users\Etu\Documents\Master1\ProcessusDevCollabortif\equinox-master\git\rt.equinox.bundles\.git failed
+	at org.eclipse.oomph.setup.git.impl.GitCloneTaskImpl.perform(GitCloneTaskImpl.java:907)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.doPerformNeededSetupTasks(SetupTaskPerformer.java:3827)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.access$1(SetupTaskPerformer.java:3770)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer$WorkspaceUtil$1.run(SetupTaskPerformer.java:5136)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2295)
+	at org.eclipse.core.internal.resources.Workspace.run(Workspace.java:2322)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer$WorkspaceUtil.performNeededSetupTasks(SetupTaskPerformer.java:5130)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer$WorkspaceUtil.access$0(SetupTaskPerformer.java:5128)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.performNeededSetupTasks(SetupTaskPerformer.java:3761)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.performTriggeredSetupTasks(SetupTaskPerformer.java:3736)
+	at org.eclipse.oomph.setup.internal.core.SetupTaskPerformer.perform(SetupTaskPerformer.java:3629)
+	at org.eclipse.oomph.setup.ui.wizards.ProgressPage$9.run(ProgressPage.java:582)
+	at org.eclipse.oomph.setup.ui.wizards.ProgressPage$11$1.run(ProgressPage.java:708)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+Caused by: org.eclipse.jgit.api.errors.JGitInternalException: Creating directories for C:\Users\Etu\Documents\Master1\ProcessusDevCollabortif\equinox-master\git\rt.equinox.bundles\.git failed
+	at org.eclipse.jgit.api.InitCommand.call(InitCommand.java:128)
+	at org.eclipse.jgit.api.CloneCommand.init(CloneCommand.java:274)
+	at org.eclipse.jgit.api.CloneCommand.call(CloneCommand.java:195)
+	at org.eclipse.oomph.setup.git.impl.GitCloneTaskImpl.cloneRepository(GitCloneTaskImpl.java:969)
+	at org.eclipse.oomph.setup.git.impl.GitCloneTaskImpl.perform(GitCloneTaskImpl.java:807)
+	... 13 more
+Caused by: java.io.IOException: Creating directories for C:\Users\Etu\Documents\Master1\ProcessusDevCollabortif\equinox-master\git\rt.equinox.bundles\.git failed
+	at org.eclipse.jgit.util.FileUtils.mkdirs(FileUtils.java:425)
+	at org.eclipse.jgit.internal.storage.file.FileRepository.create(FileRepository.java:250)
+	at org.eclipse.jgit.api.InitCommand.call(InitCommand.java:125)
+	... 17 more
+
+!ENTRY org.eclipse.oomph.setup.ui 1 0 2019-12-15 16:39:07.182
+!MESSAGE Setup tasks were performed during startup updating 2 preferences. See 'C:\Users\AdminEtu\.eclipse\org.eclipse.platform_4.13.0_1958023052_win32_win32_x86_64\configuration\org.eclipse.oomph.setup\setup.log' for details
